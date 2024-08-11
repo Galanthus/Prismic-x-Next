@@ -1,7 +1,7 @@
 {
-  "repositoryName": "nextjs-starter-prismic-minimal",
+  "repositoryName": "petbook",
   "adapter": "@slicemachine/adapter-next",
-  "libraries": ["./app/slices"],
+  "libraries": ["./slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
   "apiEndpoint": ""
 }
