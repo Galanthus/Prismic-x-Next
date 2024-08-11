@@ -1,2 +1,5 @@
 .slicemachine
 .next
+dist
+node_modules
+build
