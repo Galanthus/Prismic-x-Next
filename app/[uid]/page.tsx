@@ -4,9 +4,9 @@ import { notFound } from "next/navigation"
 import * as prismic from "@prismicio/client"
 import { SliceZone } from "@prismicio/react"
 
-import { createClient } from "@/prismicio"
-
 import { components } from "@/slices"
+
+import { client } from "@/lib/prismic"
 
 type Params = { uid: string }
 
@@ -19,7 +19,6 @@ export async function generateMetadata({
 }: {
   params: Params
 }): Promise<Metadata> {
-  const client = createClient()
   const page = await client.getByUID("page", params.uid).catch(() => notFound())
 
   return {
@@ -37,21 +36,16 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: Params }) {
-  const client = createClient()
   const page = await client.getByUID("page", params.uid).catch(() => notFound())
 
   return <SliceZone slices={page.data.slices} components={components} />
 }
 
 export async function generateStaticParams() {
-  const client = createClient()
-
   /**
    * Query all Documents from the API, except the homepage.
    */
-  const pages = await client.getAllByType("page", {
-    predicates: [prismic.filter.not("my.page.uid", "home")]
-  })
+  const pages = await client.getAllByType("page")
 
   /**
    * Define a path for every Document.
