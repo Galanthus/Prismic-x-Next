@@ -16,6 +16,9 @@ const components: JSXMapSerializer = {
     if (node.data.label === "codespan") {
       return <code>{children}</code>
     }
+  },
+  paragraph: ({ children }) => {
+    return <p>{children}</p>
   }
 }
 
