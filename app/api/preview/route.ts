@@ -2,7 +2,7 @@ import { NextRequest } from "next/server"
 
 import { redirectToPreviewURL } from "@prismicio/next"
 
-import { client } from "@/lib/prismic"
+import { client } from "@/prismicio"
 
 /**
  * This endpoint handles previews that are launched from the Page Builder.

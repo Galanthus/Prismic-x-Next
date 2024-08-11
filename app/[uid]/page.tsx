@@ -4,11 +4,9 @@ import { notFound } from "next/navigation"
 import * as prismic from "@prismicio/client"
 import { SliceZone } from "@prismicio/react"
 
+import { client } from "@/prismicio"
+
 import { components } from "@/slices"
-
-import { client } from "@/lib/prismic"
-
-type Params = { uid: string }
 
 /**
  * This page renders a Prismic Document dynamically based on the URL.
