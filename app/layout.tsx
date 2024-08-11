@@ -7,7 +7,7 @@ import { repositoryName } from "@/prismicio"
 export default function RootLayout({ children }: Readonly<Children>) {
   return (
     <html lang="en">
-      <body className="bg-white">{children}</body>
+      <body className="font-sans">{children}</body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
   )

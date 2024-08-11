@@ -7,6 +7,8 @@
   "semi": false,
   "singleAttributePerLine": false,
   "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
   "importOrder": [
     "<BUILTIN_MODULES>",
     "",
@@ -36,7 +38,5 @@
     "^@/images/(.*)$",
     "",
     "^[./]"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  ]
 }
