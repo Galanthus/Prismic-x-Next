@@ -16,7 +16,7 @@ Want to quickly get started building your own project with [Prismic][prismic] an
 To start a new project using this starter, run the following commands in your terminal:
 
 ```sh
-npx degit Galanthus/nextjs-starter-prismic-minimal your-project-name
+npx degit Galanthus/Prismic-x-Next your-project-name
 cd your-project-name
 npx @slicemachine/init@latest
 ```
