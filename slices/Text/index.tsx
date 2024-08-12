@@ -36,17 +36,14 @@ type TextProps = SliceComponentProps<Content.TextSlice>
 /**
  * Component for "Text" Slices.
  */
-const RichText = ({ slice }: TextProps): JSX.Element => {
+const Text = ({ slice }: TextProps): JSX.Element => {
   return (
     <section className="bg-white px-6 py-28 text-slate-500 md:px-10">
       <div className="mx-auto grid w-full max-w-prose gap-6">
-        <PrismicRichText
-          field={slice.primary.content}
-          components={components}
-        />
+        <PrismicRichText field={slice.primary.text} components={components} />
       </div>
     </section>
   )
 }
 
-export default RichText
+export default Text
